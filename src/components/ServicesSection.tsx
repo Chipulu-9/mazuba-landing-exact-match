@@ -1,11 +1,32 @@
-import { Check, Phone, Mail } from "lucide-react";
+import { Check, Phone, Mail, ChevronDown } from "lucide-react";
 import technicianImage from "@/assets/solar-technician.jpg";
 import storeImage from "@/assets/solar-store.jpg";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 
-const services = [
+const mainServices = [
   "Solar Installation",
   "Energy Efficiency Consultation",
   "Distributor Partnerships",
+];
+
+const allProducts = [
+  "Inverters",
+  "Batteries",
+  "Solar Panels",
+  "Solar Power Backup Systems",
+  "Protection Kits",
+  "AC & DC Pumps",
+  "Incubators",
+  "Laptops",
+  "Gaming Consoles",
+  "Gadgets",
+  "Electronics",
 ];
 
 const ServicesSection = () => {
@@ -18,13 +39,32 @@ const ServicesSection = () => {
         </div>
 
         {/* Service Tags */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
-          {services.map((service) => (
+        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 mb-12">
+          {mainServices.map((service) => (
             <div key={service} className="flex items-center gap-2">
               <Check className="w-5 h-5 text-primary" strokeWidth={3} />
               <span className="font-medium text-secondary">{service}</span>
             </div>
           ))}
+          
+          {/* Products Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" className="gap-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <Check className="w-5 h-5" strokeWidth={3} />
+                Products & Equipment
+                <ChevronDown className="w-4 h-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56 bg-background border border-border shadow-lg z-50">
+              {allProducts.map((product) => (
+                <DropdownMenuItem key={product} className="cursor-pointer hover:bg-primary/10">
+                  <Check className="w-4 h-4 text-primary mr-2" />
+                  {product}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {/* Content Cards */}
