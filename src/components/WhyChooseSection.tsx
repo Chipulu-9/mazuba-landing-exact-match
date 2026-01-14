@@ -15,27 +15,27 @@ const WhyChooseSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="section-divider">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary">
             Why Choose <span className="text-primary">Mazuba Envirotech?</span>
           </h2>
         </div>
 
-        <p className="text-center text-primary-foreground/90 max-w-2xl mx-auto mb-8 text-lg">
+        <p className="text-center text-white/90 max-w-2xl mx-auto mb-8 text-lg">
           Looking for the best solar solution for your home or business? Explore electricity in, simple days!
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <div className="bg-background/10 backdrop-blur-sm rounded-xl p-6 border border-primary/20 text-center">
-            <div className="text-4xl font-bold text-primary mb-2">10+</div>
-            <div className="text-primary-foreground/80">Years Experience</div>
+          <div className="bg-background/10 backdrop-blur-sm rounded-xl p-6 border border-accent/20 text-center">
+            <div className="text-4xl font-bold text-accent mb-2">10+</div>
+            <div className="text-white/80">Years Experience</div>
           </div>
-          <div className="bg-background/10 backdrop-blur-sm rounded-xl p-6 border border-primary/20 text-center">
-            <div className="text-4xl font-bold text-primary mb-2">500+</div>
-            <div className="text-primary-foreground/80">Installations</div>
+          <div className="bg-background/10 backdrop-blur-sm rounded-xl p-6 border border-accent/20 text-center">
+            <div className="text-4xl font-bold text-accent mb-2">500+</div>
+            <div className="text-white/80">Installations</div>
           </div>
-          <div className="bg-background/10 backdrop-blur-sm rounded-xl p-6 border border-primary/20 text-center">
-            <div className="text-4xl font-bold text-primary mb-2">100%</div>
-            <div className="text-primary-foreground/80">Satisfaction</div>
+          <div className="bg-background/10 backdrop-blur-sm rounded-xl p-6 border border-accent/20 text-center">
+            <div className="text-4xl font-bold text-accent mb-2">100%</div>
+            <div className="text-white/80">Satisfaction</div>
           </div>
         </div>
       </div>

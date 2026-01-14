@@ -42,7 +42,7 @@ const ServicesSection = () => {
         <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 mb-12">
           {mainServices.map((service) => (
             <div key={service} className="flex items-center gap-2">
-              <Check className="w-5 h-5 text-primary" strokeWidth={3} />
+              <Check className="w-5 h-5 text-accent" strokeWidth={3} />
               <span className="font-medium text-secondary">{service}</span>
             </div>
           ))}
@@ -50,7 +50,7 @@ const ServicesSection = () => {
           {/* Products Dropdown */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="gap-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button variant="outline" className="gap-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                 <Check className="w-5 h-5" strokeWidth={3} />
                 Products & Equipment
                 <ChevronDown className="w-4 h-4" />
@@ -58,8 +58,8 @@ const ServicesSection = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56 bg-background border border-border shadow-lg z-50">
               {allProducts.map((product) => (
-                <DropdownMenuItem key={product} className="cursor-pointer hover:bg-primary/10">
-                  <Check className="w-4 h-4 text-primary mr-2" />
+                <DropdownMenuItem key={product} className="cursor-pointer hover:bg-accent/10 text-secondary">
+                  <Check className="w-4 h-4 text-accent mr-2" />
                   {product}
                 </DropdownMenuItem>
               ))}
@@ -79,12 +79,12 @@ const ServicesSection = () => {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold text-secondary mb-3">
+              <h3 className="text-xl font-bold text-primary mb-3">
                 About <span className="italic">Mazuba</span> LTD
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-secondary leading-relaxed">
                 Mazuba Envirotech LTD specializes in renewable energy solutions, providing high-quality{" "}
-                <span className="font-semibold text-foreground">solar panels</span>, inverters, and mounting rails. Based in Chingola, Zambia, we empower communities with reliable, affordable solar energy for residential, commercial and industrial needs.
+                <span className="font-semibold text-secondary">solar panels</span>, inverters, and mounting rails. Based in Chingola, Zambia, we empower communities with reliable, affordable solar energy for residential, commercial and industrial needs.
               </p>
             </div>
           </div>
@@ -97,29 +97,29 @@ const ServicesSection = () => {
                 alt="Mazuba Solar Store"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
+              <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
                 MAZUBA SOLAR STORE
               </div>
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold text-secondary mb-3">
-                Our Locat<span className="text-primary">ion</span> <span className="italic font-normal text-muted-foreground">store in</span>
+              <h3 className="text-xl font-bold text-primary mb-3">
+                Our Locat<span className="text-accent">ion</span> <span className="italic font-normal text-secondary">store in</span>
               </h3>
-              <p className="text-muted-foreground mb-4">
-                HardWork Shopping Complex | <span className="font-semibold text-foreground">Shop No. 8</span> – 1 Corner Of 1th Street & Fern Avenue. Chingola, Copperbelt, Zambia
+              <p className="text-secondary mb-4">
+                HardWork Shopping Complex | <span className="font-semibold text-secondary">Shop No. 8</span> – 1 Corner Of 1th Street & Fern Avenue. Chingola, Copperbelt, Zambia
               </p>
               <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                    <Phone className="w-4 h-4 text-primary-foreground" />
+                  <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                    <Phone className="w-4 h-4 text-accent-foreground" />
                   </div>
-                  <span className="text-foreground font-medium">+260761695008</span>
+                  <span className="text-secondary font-medium">+260761695008</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                    <Mail className="w-4 h-4 text-primary-foreground" />
+                  <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                    <Mail className="w-4 h-4 text-accent-foreground" />
                   </div>
-                  <span className="text-foreground">mazubaenvirotec@gmail.com</span>
+                  <span className="text-secondary">mazubaenvirotec@gmail.com</span>
                 </div>
               </div>
             </div>
