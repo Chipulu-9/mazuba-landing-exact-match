@@ -59,10 +59,10 @@ const ProductsSection = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <h3 className="font-semibold text-primary-foreground text-sm md:text-base mb-1">
+              <h3 className="font-semibold text-primary text-sm md:text-base mb-1">
                 {product.title}
               </h3>
-              <p className="text-xs md:text-sm text-primary-foreground/70">
+              <p className="text-xs md:text-sm text-white/70">
                 {product.description}
               </p>
             </div>
@@ -71,7 +71,7 @@ const ProductsSection = () => {
 
         {/* CTA Button */}
         <div className="text-center mt-12">
-          <button className="px-8 py-4 bg-gradient-cta text-primary-foreground font-semibold rounded-full hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl">
+          <button className="px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-full hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl">
             Learn More About Our Services →
           </button>
         </div>

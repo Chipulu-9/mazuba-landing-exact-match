@@ -16,27 +16,29 @@
     --popover-foreground: 210 40% 10%;
 
     /* Brand Colors - Mazuba Custom Theme */
-    /* Light Green #00a45b */
-    --primary: 153 100% 32%;
-    --primary-foreground: 0 0% 100%;
+    /* Yellow #e6b621 - Primary/Headings */
+    --primary: 45 82% 51%;
+    --primary-foreground: 0 0% 0%;
     
-    --primary-light: 153 100% 40%;
-    /* Dark Green #047d60 */
-    --primary-dark: 164 95% 25%;
+    --primary-light: 45 82% 60%;
+    --primary-dark: 45 82% 42%;
 
-    /* Blue #2a3070 */
+    /* Blue #2a3070 - Text/Secondary */
     --secondary: 233 46% 30%;
     --secondary-foreground: 0 0% 100%;
 
     --secondary-light: 233 46% 40%;
     --secondary-dark: 233 46% 20%;
 
-    --muted: 233 20% 96%;
-    --muted-foreground: 233 20% 45%;
+    /* Light Green #00a45b - Buttons/Accent */
+    --accent: 153 100% 32%;
+    --accent-foreground: 0 0% 100%;
 
-    /* Yellow #e6b621 */
-    --accent: 45 82% 51%;
-    --accent-foreground: 0 0% 0%;
+    /* Dark Green #047d60 */
+    --accent-dark: 164 95% 25%;
+
+    --muted: 233 20% 96%;
+    --muted-foreground: 233 30% 40%;
 
     /* Red #de2127 */
     --destructive: 358 75% 50%;
@@ -44,7 +46,7 @@
 
     --border: 233 20% 88%;
     --input: 233 20% 88%;
-    --ring: 153 100% 32%;
+    --ring: 45 82% 51%;
 
     --radius: 0.5rem;
 
@@ -115,11 +117,11 @@
 
 @layer components {
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-secondary;
+    @apply text-3xl md:text-4xl font-bold text-primary;
   }
 
   .section-title-light {
-    @apply text-3xl md:text-4xl font-bold text-primary-foreground;
+    @apply text-3xl md:text-4xl font-bold text-primary;
   }
 
   .section-divider {
@@ -148,6 +150,10 @@
   }
 
   .bg-gradient-cta {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(164 95% 25%) 100%);
+  }
+
+  .btn-green {
+    @apply bg-accent text-accent-foreground hover:opacity-90;
   }
 }
