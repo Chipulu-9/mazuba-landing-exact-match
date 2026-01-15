@@ -1,12 +1,14 @@
-import { Check, Phone, Mail, ChevronDown } from "lucide-react";
-import technicianImage from "@/assets/solar-technician.jpg";
-import storeImage from "@/assets/solar-store.jpg";
+import { Check, Phone, Mail, X } from "lucide-react";
+import technicianImage from "@/assets/solar-technician.png";
+import storeImage from "@/assets/shop-mockup.jpg";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
 const mainServices = [
@@ -47,24 +49,31 @@ const ServicesSection = () => {
             </div>
           ))}
           
-          {/* Products Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+          {/* Products Popup */}
+          <Dialog>
+            <DialogTrigger asChild>
               <Button variant="outline" className="gap-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                 <Check className="w-5 h-5" strokeWidth={3} />
                 Products & Equipment
-                <ChevronDown className="w-4 h-4" />
               </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56 bg-background border border-border shadow-lg z-50">
-              {allProducts.map((product) => (
-                <DropdownMenuItem key={product} className="cursor-pointer hover:bg-accent/10 text-secondary">
-                  <Check className="w-4 h-4 text-accent mr-2" />
-                  {product}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md bg-background border border-border shadow-lg">
+              <DialogHeader>
+                <DialogTitle className="text-primary">Our Products & Equipment</DialogTitle>
+                <DialogDescription className="text-secondary">
+                  Browse our complete range of solar and electronic products
+                </DialogDescription>
+              </DialogHeader>
+              <div className="grid grid-cols-2 gap-3 max-h-96 overflow-y-auto">
+                {allProducts.map((product) => (
+                  <div key={product} className="flex items-center gap-2 p-3 rounded-lg border border-border hover:bg-accent/10 transition-colors cursor-pointer">
+                    <Check className="w-4 h-4 text-accent flex-shrink-0" />
+                    <span className="text-sm text-secondary">{product}</span>
+                  </div>
+                ))}
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
 
         {/* Content Cards */}

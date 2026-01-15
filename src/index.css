@@ -30,12 +30,12 @@
     --secondary-light: 233 46% 40%;
     --secondary-dark: 233 46% 20%;
 
-    /* Light Green #00a45b - Buttons/Accent */
-    --accent: 153 100% 32%;
-    --accent-foreground: 0 0% 100%;
+    /* Yellow #e6b621 - Buttons/Accent */
+    --accent: 45 82% 51%;
+    --accent-foreground: 0 0% 0%;
 
-    /* Dark Green #047d60 */
-    --accent-dark: 164 95% 25%;
+    /* Dark Yellow #d4a017 */
+    --accent-dark: 45 82% 42%;
 
     --muted: 233 20% 96%;
     --muted-foreground: 233 30% 40%;
