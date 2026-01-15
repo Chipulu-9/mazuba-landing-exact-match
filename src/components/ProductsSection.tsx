@@ -28,7 +28,7 @@ const products = [
 
 const ProductsSection = () => {
   return (
-    <section className="py-16 bg-gradient-dark relative overflow-hidden">
+    <section id="products" className="py-16 bg-gradient-dark relative overflow-hidden">
       {/* Decorative solar panel image */}
       <div className="absolute bottom-0 right-0 w-1/3 h-1/2 opacity-20">
         <img

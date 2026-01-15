@@ -1,4 +1,4 @@
-import mazubaLogo from "@/assets/mazuba-logo-transparent.png";
+import mazubaLogo from "@/assets/mazuba-logo.webp";
 
 const Logo = () => {
   return (

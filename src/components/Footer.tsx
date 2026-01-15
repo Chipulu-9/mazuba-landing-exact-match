@@ -1,16 +1,13 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary-dark py-12">
+    <footer id="contact" className="bg-secondary-dark py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* Logo & About */}
+          {/* About */}
           <div>
-            <div className="bg-background/95 rounded-lg p-3 w-fit mb-4">
-              <Logo />
-            </div>
+            <h3 className="text-white font-bold text-lg mb-4">Mazuba Envirotech LTD</h3>
             <p className="text-white/70 text-sm">
               Empowering communities with reliable, affordable solar energy solutions.
             </p>

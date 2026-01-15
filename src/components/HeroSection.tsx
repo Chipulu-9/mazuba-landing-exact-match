@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
 import heroImage from "@/assets/hero-solar-equipment.jpg";
-import Logo from "./Logo";
 
 const HeroSection = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +12,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section id="home" className="relative min-h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
@@ -25,15 +24,8 @@ const HeroSection = () => {
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
-        {/* Logo */}
-        <div className="pt-6 pb-12">
-          <div className="bg-background/95 backdrop-blur-sm rounded-lg p-3 w-fit shadow-lg">
-            <Logo />
-          </div>
-        </div>
-
         {/* Hero Content */}
-        <div className="text-center max-w-3xl mx-auto animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto animate-fade-in pt-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 leading-tight">
             Get a <span className="text-primary">FREE</span><br />
             Solar Package Quote!
