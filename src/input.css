@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 40% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 10%;
+
+    /* Yellow #e6b621 - Primary/Headings */
+    --primary: 45 82% 51%;
+    --primary-foreground: 0 0% 0%;
+    --primary-light: 45 82% 60%;
+    --primary-dark: 45 82% 42%;
+
+    /* Blue #2a3070 - Text/Secondary */
+    --secondary: 233 46% 30%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 233 46% 40%;
+    --secondary-dark: 233 46% 20%;
+
+    /* Yellow #e6b621 - Buttons/Accent */
+    --accent: 45 82% 51%;
+    --accent-foreground: 0 0% 0%;
+    --accent-dark: 45 82% 42%;
+
+    --muted: 233 20% 96%;
+    --muted-foreground: 233 30% 40%;
+
+    /* Red #de2127 */
+    --destructive: 358 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 233 20% 88%;
+    --input: 233 20% 88%;
+    --ring: 45 82% 51%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-primary;
+  }
+
+  .section-title-light {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-primary;
+  }
+
+  .section-divider {
+    @apply flex items-center gap-3 sm:gap-4 justify-center mb-6 sm:mb-8;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    @apply h-px w-16 bg-primary;
+  }
+
+  /* Toast notifications */
+  .toast-container {
+    @apply fixed top-4 left-4 right-4 sm:left-auto sm:right-4 z-[60] flex flex-col gap-2;
+  }
+
+  .toast {
+    @apply px-6 py-4 rounded-lg shadow-lg text-white text-sm font-medium transform transition-all duration-300;
+    @apply translate-x-0 opacity-100;
+  }
+
+  .toast-success {
+    @apply bg-green-600;
+  }
+
+  .toast-error {
+    @apply bg-red-600;
+  }
+
+  .toast-hide {
+    @apply translate-x-full opacity-0;
+  }
+
+  /* Modal overlay */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300;
+  }
+
+  .modal-overlay.active {
+    @apply opacity-100 pointer-events-auto;
+  }
+
+  .modal-content {
+    @apply bg-background rounded-xl shadow-2xl max-w-md w-full p-6 border border-border transform scale-95 transition-transform duration-300;
+  }
+
+  .modal-overlay.active .modal-content {
+    @apply scale-100;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(180deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-light)) 100%);
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(180deg, hsl(var(--secondary-dark)) 0%, hsl(var(--secondary)) 100%);
+  }
+
+  .bg-gradient-cta {
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(164 95% 25%) 100%);
+  }
+}

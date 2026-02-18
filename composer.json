@@ -1,0 +1,14 @@
+{
+    "name": "mazuba/envirotech-website",
+    "description": "Mazuba Envirotech LTD - Solar Energy Solutions Website",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "setasign/fpdf": "^1.8"
+    },
+    "autoload": {
+        "classmap": [
+            "includes/"
+        ]
+    }
+}

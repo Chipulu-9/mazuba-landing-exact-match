@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(composer install:*)",
+      "Bash(npm run build:css:*)",
+      "Bash(php:*)",
+      "Bash(php -l:*)",
+      "Bash(\"C:/xampp/mysql/bin/mysql.exe\" -u root -e \"SELECT 1\")"
+    ]
+  }
+}
