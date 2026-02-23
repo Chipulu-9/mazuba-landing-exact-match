@@ -16,8 +16,10 @@ dist-ssr
 # Database
 *.db
 database/
-data/
 schema.sql
+
+# Allow source data files
+!src/data/
 
 # Editor directories and files
 .vscode/*
