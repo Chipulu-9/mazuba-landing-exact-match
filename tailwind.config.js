@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-    "./public/**/*.php",
-    "./templates/**/*.php",
+    "./index.html",
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
     container: {
